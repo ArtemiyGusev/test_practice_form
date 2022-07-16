@@ -12,9 +12,9 @@ class datepicker:
 
     def select_date_in_datepicker(self, elements_in_datepicker=None):
         if elements_in_datepicker is None:
-            self.element.set_value(now_date.strftime("%d %b %Y")).click()
+            self.element.set_value("%d %b %Y")
         else:
             self.element.click()
             s(elements_in_datepicker).s('[value="%d' % now_date.year + '"]').click()
-            s(elements_in_datepicker).s('[value="%d' % now_date.month + '"]').click()
-            s(elements_in_datepicker).s('[value="%d' % now_date.day + '"]').click()
+            s(elements_in_datepicker).s('[value="%d' % (now_date.month - 1) + '"]').click()
+            s(elements_in_datepicker).s('[aria-label*="%d' % now_date.day + '"]').click()

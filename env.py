@@ -13,8 +13,12 @@ gender_select_male = '[for=gender-radio-1]'
 date_of_birth = '#dateOfBirth'
 date_of_birth_input = '#dateOfBirthInput'
 subjects_input = '#subjectsInput'
-select_element_in_subject = '#react-select-2-option-1'
-
+select_element_in_subject = '#react-select-2-option-0'
+element_and_element_text = {'#firstName': 'Jack',
+                            '#lastName': 'Shepard',
+                            '#userEmail': 'Jack@mail.ru',
+                            '#userNumber': '4815162342',
+                            '#currentAddress': 'Oceanic'}
 
 expected_result_in_table = 'Student Name', \
                            'Jack Shepard', \
@@ -27,7 +31,7 @@ expected_result_in_table = 'Student Name', \
                            'Date of Birth', \
                            now_date.strftime("%d %B,%Y"), \
                            'Subjects', \
-                           'Biology', \
+                           'English', \
                            'Hobbies', \
                            'Sports', \
                            'Picture', \
@@ -36,5 +40,3 @@ expected_result_in_table = 'Student Name', \
                            'Oceanic', \
                            'State and City', \
                            'NCR Delhi'
-
-

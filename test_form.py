@@ -2,6 +2,7 @@ from controls.dropdown import dropdown
 from controls.check_table_text import check_table_text
 from controls.datepicker import datepicker
 from controls.subject import subject
+from controls.application_manager import applicationManager
 from selene.support.shared.jquery_style import s, ss
 from env import *
 from helper.acceptance_test_modul import url_open_size, add_file
@@ -10,19 +11,11 @@ from helper.acceptance_test_modul import url_open_size, add_file
 def test_case_practice_form():
     url_open_size('/automation-practice-form')
 
-    s('#firstName').type('Jack')
-
-    s('#lastName').type('Shepard')
-
-    s('#userEmail').type('Jack@mail.ru')
-
-    s('#userNumber').type('4815162342')
-
-    s('#currentAddress').type('Oceanic')
+    applicationManager(element_and_element_text).fill_form()
 
     subject(s(subjects_input)).select_element_in_list('g', select_element_in_subject)
 
-    datepicker(s(date_of_birth_input)).select_date_in_datepicker(date_of_birth)
+    datepicker(s(date_of_birth_input)).select_date_in_datepicker()
 
     s(gender_select_male).click()
 
