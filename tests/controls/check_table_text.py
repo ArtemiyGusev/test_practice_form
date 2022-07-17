@@ -1,7 +1,7 @@
 from selene.support.conditions import have
 
 
-class check_table_text:
+class CheckTableText:
     def __init__(self, element):
         self.element = element
 

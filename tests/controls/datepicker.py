@@ -5,7 +5,7 @@ now_date = datetime.datetime.now()
 str(now_date)
 
 
-class datepicker:
+class DatePicker:
 
     def __init__(self, element):
         self.element = element

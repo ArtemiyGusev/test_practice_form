@@ -1,7 +1,7 @@
 from selene.support.shared.jquery_style import s
 
 
-class subject:
+class Subject:
     def __init__(self, element):
         self.element = element
 
